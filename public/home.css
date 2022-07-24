@@ -1,0 +1,92 @@
+.n{
+    padding: 5px;
+    margin: auto;
+}
+.n li {
+    margin-left: 20px;
+    font-size: 20px;
+}
+#home{
+    background-image: url('./login.jpg');
+    /* background-color: aqua */
+background-size: contain;
+background-repeat: no-repeat;
+    height:90vh;
+}
+.contact3 {
+    font-family: "Montserrat", sans-serif;
+    color: #8d97ad;
+    font-weight: 300;
+}
+
+.contact3 h1,
+.contact3 h2,
+.contact3 h3,
+.contact3 h4,
+.contact3 h5,
+.contact3 h6 {
+    color: #3e4555;
+}
+
+.contact3 .font-weight-medium {
+    font-weight: 500;
+}
+
+.contact3 .card-shadow {
+    -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+    box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+}
+
+.contact3 .btn-danger-gradiant {
+    background: #ff4d7e;
+    background: -webkit-linear-gradient(legacy-direction(to right), #ff4d7e 0%, #ff6a5b 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#ff4d7e), to(#ff6a5b));
+    background: -webkit-linear-gradient(left, #ff4d7e 0%, #ff6a5b 100%);
+    background: -o-linear-gradient(left, #ff4d7e 0%, #ff6a5b 100%);
+    background: linear-gradient(to right, #ff4d7e 0%, #ff6a5b 100%);
+}
+
+.contact3 .btn-danger-gradiant:hover {
+    background: #ff6a5b;
+    background: -webkit-linear-gradient(legacy-direction(to right), #ff6a5b 0%, #ff4d7e 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#ff6a5b), to(#ff4d7e));
+    background: -webkit-linear-gradient(left, #ff6a5b 0%, #ff4d7e 100%);
+    background: -o-linear-gradient(left, #ff6a5b 0%, #ff4d7e 100%);
+    background: linear-gradient(to right, #ff6a5b 0%, #ff4d7e 100%);
+}
+.phone a{
+text-decoration: none;
+font-size: medium;
+font-family: Georgia, 'Times New Roman', Times, serif;
+color:grey;
+
+}
+ #videoShow {
+     margin-left: 20px;
+     padding: 0;
+     width: 95%;
+     height: fit-content;
+     display: inline-block;
+     
+     align-items: center;
+     flex-direction: column;
+     border: 1px solid gray;
+     border-radius: 3px;
+ }
+#video{
+    margin:0;
+    
+}
+#videoPanel
+{
+    margin: auto;
+    display:inline-flex;
+    left: 30px;
+        justify-content: left;
+        align-items: center;
+        padding: 10px;
+}
+
+ canvas {
+     position: absolute;
+ }

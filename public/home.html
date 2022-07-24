@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection</title>
+    <script src="./js/face-api.min.js"></script>
+    <script defer src="./js/script.js"></script>
+    <style>
+       
+    </style>
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="home.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">LOGO</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 n">
+            <li class="nav-item active">
+                <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#search">Search</a>
+            </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#About">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#Contact">Contact</a>
+        </li>
+        </ul>
+        
+    </div>
+</nav>
+<div id="home">
+    
+</div>
+<div id="About">
+<div class="container-fluid">
+    <h1 style="left: 57px; position: relative;">About</h1>
+    
+    <div class="row">
+        <div class="col-sm-3 col-md-6 col-lg-4" >
+           <img src="./about.jpg" width="50%">
+        </div>
+        <div class="col-sm-9 col-md-6 col-lg-8" >
+            Face recognition systems use computer algorithms to pick out specific, distinctive details about a person’s face. These
+            details, such as distance between the eyes or shape of the chin, are then converted into a mathematical representation
+            and compared to data on other faces collected in a face recognition database
+        </div>
+    </div>
+</div>
+</div>
+<div id="videoShow">
+
+<div class="row">
+    <div class="col-md-10" id="videoPanel">
+        <video src="./speech.mp4" id="video" height="300" width="auto" muted muted controls>
+        </video>
+        <button type="button" id="camera" onclick="turnONcamera()">Camera</button> 
+    </div>
+    <div class="col-md-2" id="videoProcessPanel">
+    <label for="file">Uploading Model</label>
+    <progress id="file" value="0" max="100"> 10% </progress>
+    <br>
+    <span id="processText">0%</span>
+    </div>
+</div>
+</div>
+<div id="Contact">
+   
+<div class="contact3 py-5">
+    <div class="row no-gutters">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card-shadow">
+                        <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/2.jpg"
+                            class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-box ml-3">
+                        <h1 class="font-weight-light mt-2">Quick Contact</h1>
+                        <form class="mt-4">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group mt-2">
+                                        <input class="form-control" type="text" placeholder="name">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group mt-2">
+                                        <input class="form-control" id="email_sender" type="email" placeholder="email address">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group mt-2">
+                                        <input class="form-control" type="text" placeholder="phone">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group mt-2">
+                                        <textarea class="form-control" rows="3" id="message" placeholder="message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <button type="submit" onclick="sendEmail()"
+                                        class="btn btn-danger-gradiant mt-3 text-white border-0 px-3 py-2"><span>
+                                            SUBMIT</span></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="card mt-4 border-0 mb-4">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                                <div class="card-body d-flex align-items-center c-detail pl-0">
+                                    <div class="mr-3 align-self-center">
+                                        <img
+                                            src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon1.png">
+                                    </div>
+                                    <div class="">
+                                        <h6 class="font-weight-medium">Address</h6>
+                                        <p class="">601 Sherwood Ave.
+                                            <br> San Bernandino
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <div class="card-body d-flex align-items-center c-detail">
+                                    <div class="mr-3 align-self-center">
+                                        <img
+                                            src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon2.png">
+                                    </div>
+                                    <div class="">
+                                        <h6 class="font-weight-medium">Phone</h6>
+                                        <p class="phone">
+                                            <a href="tel:9755778801">9755478801</a> 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <div class="card-body d-flex align-items-center c-detail">
+                                    <div class="mr-3 align-self-center">
+                                        <img
+                                            src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon3.png">
+                                    </div>
+                                    <div class="">
+                                        <h6 class="font-weight-medium">Email</h6>
+                                        <p class="">
+                                            shakshamneekhra96@gmail
+                                            <br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
